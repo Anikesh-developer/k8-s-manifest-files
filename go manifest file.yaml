@@ -23,8 +23,7 @@ spec:
       containers:
         - name:  productcatalog
           image: docker.io/anikesh372/product-catalog:v1
-          ports:
-            
+          ports:            
             - containerPort: 8080
           env:
             - name: OTEL_SERVICE_NAME
@@ -46,3 +45,6 @@ spec:
               value: http://$(OTEL_COLLECTOR_NAME):4317
             - name: OTEL_RESOURCE_ATTRIBUTES
               value: service.name=$(OTEL_SERVICE_NAME),service.namespace=opentelemetry-demo,service.version=1.12.0
+          resources:
+            limits:
+              memory: 20Mi
