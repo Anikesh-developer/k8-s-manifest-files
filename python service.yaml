@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommandation
+  namespace: default
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8000
+    targetPort: 5000
+  selector:
+    app:  recommandation
