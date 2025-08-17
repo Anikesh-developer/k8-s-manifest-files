@@ -1,0 +1,25 @@
+  144  git status
+  145  git init
+  146  git add .
+  147  git commit -m "Python docker file added"
+  148  git branch -M main
+  149  git remote add origin https://github.com/Anikesh-developer/python-docker-script.git
+  150  git push -u origin main
+  151  git push origin main --force ---- above git push cmd got failed so used force option
+  --------------------------------
+  
+  152  docker images
+  153  docekr rmi 50876095cf2e --- deleting unused images
+  154  docker rmi 50876095cf2e
+  155  docker ps -a
+  156  docker images
+  157  docker rmi 4294c7f248eb
+  158  df -hT
+  159  docker images
+  160  docker tag 02acf7512c30 anikesh372/my-python-app:latest ----- tagging the image for docker push
+  161  docker images
+  162  docker push anikesh372/my-python-app   ---- trying to push the image but failed bcz 1st hv to login docker and create repo in dockerhub
+  163  docker images
+  164  docker login    ---- logging into docker through CLI
+  165  docker push anikesh372/my-python-app:latest --- now pushing the image to docker hub
+  166  docker images
